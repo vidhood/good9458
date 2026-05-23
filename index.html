@@ -365,59 +365,7 @@ video.play();
 });
 
 
-// SHOW AD ONLY ONCE
-let adShown = false;
-let adClosed = false;
 
-setTimeout(() => {
-
-if(adShown || adClosed) return;
-
-adShown = true;
-
-let countdown = 5;
-
-const box = document.getElementById("countdownBox");
-const text = document.getElementById("countdownText");
-
-box.style.display = "flex";
-
-text.innerText = "Ad will open in " + countdown + " seconds...";
-
-let interval = setInterval(() => {
-
-countdown--;
-
-if(countdown > 0){
-
-text.innerText = "Ad will open in " + countdown + " seconds...";
-
-}else{
-
-clearInterval(interval);
-
-window.open(
-"https://www.profitablecpmratenetwork.com/f3brs4ymgv?key=0f1a89dcb276c63876ce1d45eff671d8",
-"_blank"
-);
-
-box.style.display = "none";
-
-}
-
-},1000);
-
-},20000);
-
-
-// CLOSE AD
-function closeAd(){
-
-document.getElementById("countdownBox").style.display = "none";
-
-adClosed = true;
-
-}
 
 </script>
 
